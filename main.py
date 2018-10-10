@@ -47,7 +47,7 @@ class BotClient(discord.AutoShardedClient):
 
         self.config = configparser.SafeConfigParser()
         self.config.read('config.ini')
-        self.dbl_token = self.config.get('DEFAULT', 'dbl_token')
+        self.dbl_token = self.config.get("NDk5NTkzODg3NjY5NjgyMTc2.Dp-scw.fmhLNTIIGa2nlvivO3_LND4MtZ0")
 
 
     async def on_ready(self):
@@ -101,7 +101,7 @@ class BotClient(discord.AutoShardedClient):
                 session.commit()
                 break
 
-        if message.author.bot or message.content is None or message.guild is None:
+        if message.content is None or message.guild is None:
             return
 
         try:
